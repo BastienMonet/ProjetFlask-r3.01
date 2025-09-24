@@ -1,0 +1,33 @@
+{% extends "baseMieux.html" %}
+
+{% block main %}
+    <h1>Liste des livres</h1>
+    <p>Nombre de livre : {{ livres|length }}</p>
+    {% if livres|length == 0 %}
+    <p>Aucun livre trouvé.</p>
+    {% endif %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Prix</th>
+                <th>Titre</th>
+                <th>Url</th>
+                <th>Img</th>
+                <th>auteur</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for unLivre in livres %}
+            <tr>
+                <td>{{ unLivre.idL }}</td>
+                <td>{{ unLivre.Prix }}</td>
+                <td>{{ unLivre.Titre }}</td>
+                <td><a href="{{unLivre.Url}}">{{unLivre.Url}}</a></td>
+                <td> <img src="../static/images/{{unLivre.Img}}" alt="bonjour"></td>
+                <td>{{ unLivre.auteur.Nom }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

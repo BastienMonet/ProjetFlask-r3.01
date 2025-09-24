@@ -1,6 +1,6 @@
 from .app import app
 from flask import render_template, request
-from monApp.models import Auteur
+from monApp.models import Auteur, Livre
 
 @app.route('/')
 def helloworld() :
@@ -10,6 +10,12 @@ def helloworld() :
 def getAuteurs():
     lesAuteurs = Auteur.query.all()
     return render_template('auteurs_list.html', title="R3.01 Dev Web avec Flask", auteurs=lesAuteurs)
+
+@app.route('/livres/')
+def getLivres():
+    lesLivre = Livre.query.all()
+    return render_template('livres_list.html', title="R3.01 Dev Web avec Flask, les livres", livres=lesLivre)
+
 
 @app.route("/about/")
 def about() :
@@ -30,6 +36,14 @@ def index():
     else :
         param_name = request.args.get('name')
     return render_template("index.html",title="R3.01 Dev Web avec Flask",name=param_name)
+
+
+
+@app.route('/base/')
+def base():
+    return render_template("baseMieux.html")
+
+
 
 if __name__== "__main__" :
     app.run()
