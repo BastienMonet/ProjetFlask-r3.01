@@ -19,12 +19,14 @@
                             <a class="nav-link dropdown-toggle" href="{{ url_for('getAuteurs') }}" id="auteursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Auteurs</a>
                             <ul class="dropdown-menu" aria-labelledby="auteursDropdown">
                                 <li><a class="dropdown-item" href="{{ url_for('getAuteurs') }}">Liste des auteurs</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('createAuteur') }}">Créer un auteur</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="{{ url_for('getLivres') }}" id="livresDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Livres</a>
                             <ul class="dropdown-menu" aria-labelledby="livresDropdown">
                                 <li><a class="dropdown-item" href="{{ url_for('getLivres') }}">Liste des livres</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('createLivre') }}">Créer un Livre</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">À propos</a></li>

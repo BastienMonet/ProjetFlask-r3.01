@@ -9,3 +9,4 @@ app.config.from_object('config')
 db = SQLAlchemy()
 Bootstrap(app)
 db.init_app(app)
+    

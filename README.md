@@ -8,3 +8,6 @@ dans cette troisième séance j'ai decouvert le modèle MVT relier la vue au tem
 
 dans cette quatrième séance j'ai rajouter du style et j'ai fixer le css qui s'importait pas correctement. J'ai réaliser la vue et le template pour lister les livres
 j'ai ajouter la nav bar et fix le margin-top du main qui s'encastre dans le nav
+
+
+dans cette cinquième séance j'ai réaliser les insert, update et delete pour les auteurs a l'aide des methode POST et j'ai essayer de rajouter la fonctionnalité de créer des livres (mauvaise mise en page)
